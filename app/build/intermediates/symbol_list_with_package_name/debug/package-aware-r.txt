@@ -719,6 +719,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id forever
+id gameLayout
 id gone
 id gridLayout
 id group_divider
@@ -802,7 +803,6 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
-id tv_done
 id tv_question
 id tv_result
 id tv_score
