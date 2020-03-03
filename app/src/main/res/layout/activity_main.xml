@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="GO!"
+        android:onClick="start"
+        android:visibility="invisible"
+        android:textSize="50sp"
+        android:padding="40dp"
+        android:background="@android:color/holo_green_light"/>
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:text="30s"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAMPLE QUESTION"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_timer"
+            app:layout_constraintEnd_toStartOf="@id/tv_score"
+            app:layout_constraintStart_toEndOf="@id/tv_timer"
+            app:layout_constraintTop_toTopOf="@id/tv_timer" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="center"
+            android:text="0/0"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="40dp"
+            android:columnCount="2"
+            android:rowCount="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question">
+
+            <Button
+                android:id="@+id/bt_0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="14"
+                android:textSize="50sp"
+                android:layout_gravity="fill"
+                android:background="@android:color/holo_red_light"
+                android:onClick="submitAnswer"
+                android:tag="0" />
+
+            <Button
+                android:id="@+id/bt_1"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="2"
+                android:textSize="50sp"
+                android:layout_gravity="fill"
+                android:background="@android:color/holo_purple"
+                android:onClick="submitAnswer"
+                android:tag="1" />
+
+            <Button
+                android:id="@+id/bt_2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="32"
+                android:textSize="50sp"
+                android:layout_gravity="fill"
+                android:background="@android:color/holo_blue_light"
+                android:onClick="submitAnswer"
+                android:tag="2" />
+
+            <Button
+                android:id="@+id/bt_3"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="9"
+                android:textSize="50sp"
+                android:layout_gravity="fill"
+                android:background="@android:color/holo_green_light"
+                android:onClick="submitAnswer"
+                android:tag="3" />
+        </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct!"
+        android:textSize="50sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout" />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DONE"
+            android:visibility="invisible"
+            android:textSize="50sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gridLayout" />
+
+        <Button
+            android:id="@+id/bt_playAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_done" />
+</androidx.constraintlayout.widget.ConstraintLayout>
